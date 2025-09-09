@@ -6,30 +6,41 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 3fr 1fr;
+  grid-template-rows: 25px 1fr;
   gap: 3vw;
+  background-color: #38373791;
 }
 #page-title {
   display: grid;
   grid-column-start: 3;
+  grid-row-start: 1;
 }
 
 #poster-container {
   grid-column-start: 2;
+  grid-row-start: 2;
+  display: flex;
   align-content: center;
+  justify-content: center;
 }
 
 #movie-poster {
   height: 75vh;
   aspect-ratio: auto;
   border-style: solid;
-  box-shadow: 5px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.76);
 }
 
+#user-forms {
+  grid-row-start: 2;
+  width: 100%;
+}
 #radio-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-style: none;
 }
 #legend {
   display: flex;
@@ -40,24 +51,45 @@ body {
 }
 
 #user-forms {
-  grid-column-start: 4;
-  align-content: center;
+  grid-column: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafc;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.76);
+  border-style: none;
+  margin: auto;
 }
 #movie-title {
   display: flex;
   justify-content: center;
 }
 #text-box-container {
+  border-style: none;
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
 #text-box {
+  border-style: solid;
+  background-image: url("./fire.jpg");
+  border-color: rgb(255, 0, 0);
+  background-position: 10px center;
+  border-radius: 3px;
   width: 100%;
   height: 5vh;
 }
 #submit-button {
+  border-style: solid black;
   width: 100%;
   height: 2rem;
+}
+
+#user-hot-takes {
+  grid-column-start: 4;
 }
