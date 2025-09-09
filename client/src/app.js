@@ -8,6 +8,9 @@ async function Main() {
   const movieID = document.getElementById("movie-id");
   movieID.value = movieData.id;
 
+  const movieTitle = document.getElementById("movie-title");
+  movieTitle.textContent = movieData.title;
+
   const posterImage = document.getElementById("movie-poster");
   posterImage.src = movieData.poster;
 }
@@ -24,6 +27,7 @@ async function getHotTakes() {
   const hotTakeContainer = document.querySelector(".hot-take-container");
   for (let take of hotTakes) {
     const hotTake = document.createElement("p");
+    hotTake.classList.add("hot-take-text");
     hotTake.textContent = take.hot_takes;
     hotTakeContainer.appendChild(hotTake);
   }
