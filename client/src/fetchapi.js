@@ -1,4 +1,4 @@
-const pageRand = Math.ceil(Math.random() * 1);
+const pageRand = Math.ceil(Math.random() * 2);
 const apiToken = import.meta.env.VITE_API_TOKEN;
 
 const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${pageRand}`;

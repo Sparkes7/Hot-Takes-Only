@@ -1,10 +1,10 @@
 import { getMovie, getRandomMovie } from "./fetchapi";
 
-async function Main() {
-  const movieData = await getRandomMovie();
-  // const movieData = await getMovie(680);
-  console.log(movieData);
+const emotes = ["🤬", "🤮", "3", "4", "5", "6", "7", "8", "9", "10"];
+// const movieData = await getMovie(13);
+const movieData = await getRandomMovie();
 
+async function SetRandomMovie() {
   const movieID = document.getElementById("movie-id");
   movieID.value = movieData.id;
 
@@ -16,7 +16,7 @@ async function Main() {
 }
 
 async function getHotTakes() {
-  //const movieData = await getMovie(122);
+  // const movieData = await getMovie(122);
   const response = await fetch(
     "https://hot-takes-only.onrender.com/user-reviews"
   );
@@ -26,14 +26,16 @@ async function getHotTakes() {
 
   const hotTakeContainer = document.querySelector(".hot-take-container");
   for (let take of hotTakes) {
-    const hotTake = document.createElement("p");
-    hotTake.classList.add("hot-take-text");
-    hotTake.textContent = take.hot_takes;
-    hotTakeContainer.appendChild(hotTake);
+    if (take.movie_id === movieData.id) {
+      const hotTake = document.createElement("p");
+      hotTake.classList.add("hot-take-text");
+      hotTake.textContent = ` ${emotes[take.rating]} ${take.hot_takes}`;
+      hotTakeContainer.appendChild(hotTake);
+    }
   }
 }
 
-Main();
+SetRandomMovie();
 getHotTakes();
 
 const userForms = document.getElementById("user-forms");
