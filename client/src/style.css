@@ -61,3 +61,12 @@ body {
   width: 100%;
   height: 2rem;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-label:hover {
+  transform: scale(150%);
+}

@@ -10,6 +10,9 @@ async function Main() {
 
   const posterImage = document.getElementById("movie-poster");
   posterImage.src = movieData.poster;
+
+  const movieTitle = document.getElementById("movie-title");
+  movieTitle.textContent = movieData.title;
 }
 
 async function getHotTakes() {

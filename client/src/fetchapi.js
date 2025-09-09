@@ -13,6 +13,7 @@ const options = {
 export async function getRandomMovie() {
   const response = await fetch(url, options);
   const data = await response.json();
+  console.log(data);
   const randIndex = Math.floor(Math.random() * data.results.length);
 
   const posterPath = data.results[randIndex].poster_path;
