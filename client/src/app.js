@@ -5,6 +5,9 @@ async function Main() {
   // const movieData = await getMovie(122);
   console.log(movieData);
 
+  const movieID = document.getElementById("movie-id");
+  movieID.value = movieData.id;
+
   const posterImage = document.getElementById("movie-poster");
   posterImage.src = movieData.poster;
 }

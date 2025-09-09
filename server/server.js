@@ -27,7 +27,7 @@ app.get("/user-reviews", async (request, response) => {
 //CREATE (POST) new data
 app.post("/add-user-reviews", (request, response) => {
     const newUserReview = request.body.formValues; 
-    const query = db.query(`INSERT INTO user-reviews (movie_id, hot_takes, rating)`, 
+    const query = db.query(`INSERT INTO user_reviews (movie_id, hot_takes, rating) VALUES ($1, $2, $3)`, 
         [newUserReview.movie_id, newUserReview.hot_takes, newUserReview.rating]
     );
     response.json("Data sent", query);
