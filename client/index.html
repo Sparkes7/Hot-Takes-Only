@@ -1,13 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <!-- To add: favicon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="app.js" defer></script>
+    <title>Hot Takes Only: A movie review platform</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <h1 id="Page Title">Hot Takes Only</h1>
+    <div id="poster-container">
+      <img src="./src/poster_placeholder.jpg" id="movie-poster" />
+    </div>
+    <div id="user-forms">
+      <fieldset id="radio-container">
+        <legend>Rate this movie:</legend>
+        <input
+          class="radio-buttons"
+          id="1"
+          type="radio"
+          name="rating"
+          value="1"
+        />
+        <label for="1" class="radio-label">🤬</label>
+        <input
+          class="radio-buttons"
+          id="2"
+          type="radio"
+          name="rating"
+          value="2"
+        />
+        <label for="2" class="radio-label">🤮</label>
+        <input
+          class="radio-buttons"
+          id="3"
+          type="radio"
+          name="rating"
+          value="3"
+        />
+        <label for="3" class="radio-label">🤢</label>
+        <input
+          class="radio-buttons"
+          id="4"
+          type="radio"
+          name="rating"
+          value="4"
+        />
+        <label for="4" class="radio-label">😕</label>
+        <input
+          class="radio-buttons"
+          id="5"
+          type="radio"
+          name="rating"
+          value="5"
+          checked
+        />
+        <label for="5" class="radio-label">😐</label>
+        <input
+          class="radio-buttons"
+          id="6"
+          type="radio"
+          name="rating"
+          value="6"
+        />
+        <label for="6" class="radio-label">🤮</label>
+        <input
+          class="radio-buttons"
+          id="7"
+          type="radio"
+          name="rating"
+          value="7"
+        />
+        <label for="7" class="radio-label">🤮</label>
+        <input
+          class="radio-buttons"
+          id="8"
+          type="radio"
+          name="rating"
+          value="8"
+        />
+        <label for="8" class="radio-label">🥵</label>
+        <input
+          class="radio-buttons"
+          id="9"
+          type="radio"
+          name="rating"
+          value="9"
+        />
+        <label for="9" class="radio-label">🤯</label>
+        <input
+          class="radio-buttons"
+          id="10"
+          type="radio"
+          name="rating"
+          value="10"
+        />
+        <label for="10" class="radio-label">🤮</label>
+      </fieldset>
+      <fieldset id="text-box-container">
+        <label for="hot-take">Give us your 🔥 Hot Take 🔥 </label>
+        <input type="text" maxlength="100" id="text-box" />
+        <button type="submit">Submit Review</button>
+      </fieldset>
+      <!-- make background flames -- />
+    </div>
+  </body>
+</html>
+
+<!-- image box in grid format: takes up centre screen, margins OR columns on sides -->
+    </div>
   </body>
 </html>
