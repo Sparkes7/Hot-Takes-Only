@@ -4,14 +4,15 @@
   box-sizing: border-box;
 }
 
-/* width="50vw" height="10vh" */
 body {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  gap: 3vw;
 }
-/* 1 2 1 2 1: first 2 is poster, 2nd 2 is inputs */
-/* #user-forms {
-} */
+#page-title {
+  display: grid;
+  grid-column-start: 3;
+}
 
 #poster-container {
   grid-column-start: 2;
@@ -25,27 +26,38 @@ body {
   box-shadow: 5px;
 }
 
+#radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#legend {
+  display: flex;
+  justify-content: center;
+}
+.radio-label {
+  display: flex;
+}
+
 #user-forms {
   grid-column-start: 4;
   align-content: center;
 }
-
-#radioboxes {
+#movie-title {
   display: flex;
-  flex-direction: row;
-  padding: 5px;
+  justify-content: center;
 }
-
+#text-box-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
 #text-box {
-  width: 500px;
-  height: 10vh;
+  width: 100%;
+  height: 5vh;
 }
-
-.radio-buttons {
-  display: block;
-}
-
-.radio-label {
-  display: flex;
-  flex-direction: row;
+#submit-button {
+  width: 100%;
+  height: 2rem;
 }
