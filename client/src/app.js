@@ -2,7 +2,7 @@ import { getMovie, getRandomMovie } from "./fetchapi";
 
 async function Main() {
   const movieData = await getRandomMovie();
-  // const movieData = await getMovie(122);
+  // const movieData = await getMovie(680);
   console.log(movieData);
 
   const movieID = document.getElementById("movie-id");
@@ -14,7 +14,9 @@ async function Main() {
 
 async function getHotTakes() {
   //const movieData = await getMovie(122);
-  const response = await fetch("http://localhost:8080/user-reviews");
+  const response = await fetch(
+    "https://hot-takes-only.onrender.com/user-reviews"
+  );
 
   const hotTakes = await response.json();
   console.log(hotTakes);
@@ -39,12 +41,12 @@ function handleSubmit(event) {
   const formValues = Object.fromEntries(formData);
   console.log(formValues);
 
-  //URL will be localhost for now - will update this once we have render URL 
-  fetch("http://localhost:8080/add-user-reviews", {
+  //URL will be localhost for now - will update this once we have render URL
+  fetch("https://hot-takes-only.onrender.com/add-user-reviews", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ formValues }),
   });
-};
+}
