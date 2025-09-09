@@ -48,6 +48,10 @@ body {
 }
 .radio-label {
   display: flex;
+  margin-bottom: 1rem;
+}
+.radio-label:hover {
+  transform: scale(1.5);
 }
 
 #user-forms {
@@ -92,4 +96,9 @@ body {
 
 #user-hot-takes {
   grid-column-start: 4;
+}
+
+.hot-take-text {
+  background-color: rgb(228, 228, 228);
+  margin: 0.5rem;
 }
