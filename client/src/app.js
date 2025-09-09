@@ -1,8 +1,8 @@
 import { getMovie, getRandomMovie } from "./fetchapi";
 
 const emotes = ["🤬", "🤮", "3", "4", "5", "6", "7", "8", "9", "10"];
-const movieData = await getMovie(13);
-// const movieData = await getRandomMovie();
+// const movieData = await getMovie(13);
+const movieData = await getRandomMovie();
 
 async function SetRandomMovie() {
   const movieID = document.getElementById("movie-id");
