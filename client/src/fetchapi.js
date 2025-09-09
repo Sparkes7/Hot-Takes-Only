@@ -27,7 +27,7 @@ export async function getRandomMovie() {
   return movieData;
 }
 
-async function getMovie(id) {
+export async function getMovie(id) {
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${id}`,
     options
@@ -45,4 +45,3 @@ async function getMovie(id) {
   console.log(movieData);
   return movieData;
 }
-getMovie(423);
