@@ -10,25 +10,26 @@ app.use(cors());
 //PORT set up
 const PORT = 8080;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
 
-//root route set up 
+//root route set up
 app.get("/", (request, response) => {
-    response.json({ message: "Welcome to the server. GET comfy!"});
+  response.json({ message: "Welcome to the server. GET comfy!" });
 });
 
 //READ (GET) data from table
 app.get("/user-reviews", async (request, response) => {
-    const query = await db.query(`SELECT * FROM user_reviews`);
-    response.json(query.rows);
+  const query = await db.query(`SELECT * FROM user_reviews`);
+  response.json(query.rows);
 });
 
 //CREATE (POST) new data
 app.post("/add-user-reviews", (request, response) => {
-    const newUserReview = request.body.formValues; 
-    const query = db.query(`INSERT INTO user_reviews (movie_id, hot_takes, rating) VALUES ($1, $2, $3)`, 
-        [newUserReview.movie_id, newUserReview.hot_takes, newUserReview.rating]
-    );
-    response.json("Data sent", query);
+  const newUserReview = request.body.formValues;
+  const query = db.query(
+    `INSERT INTO user_reviews (movie_id, hot_takes, rating) VALUES ($1, $2, $3)`,
+    [newUserReview.movie_id, newUserReview.hot_takes, newUserReview.rating]
+  );
+  response.json("Data sent", query);
 });
