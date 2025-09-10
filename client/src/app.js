@@ -1,7 +1,7 @@
 import { getMovie, getRandomMovie } from "./fetchapi";
 
 const emotes = ["😡", "😍", "👀", "🥺", "🤯", "🤡", "😏", "💀", "🤢", "👺"];
-// const movieData = await getMovie(13);
+// const movieData = await getMovie(122);
 const movieData = await getRandomMovie();
 console.log(movieData.trailer);
 
@@ -24,7 +24,6 @@ async function SetRandomMovie() {
 }
 
 async function getHotTakes() {
-  // const movieData = await getMovie(122);
   const response = await fetch(
     "https://hot-takes-only.onrender.com/user-reviews"
   );
