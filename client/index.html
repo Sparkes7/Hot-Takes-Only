@@ -5,6 +5,9 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <!-- To add: favicon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./src/style.css" />
     <script type="module" src="./src/app.js" defer></script>
     <title>Hot Takes Only: A movie review platform</title>
@@ -14,8 +17,12 @@
     <div id="poster-container">
       <img src="./src/poster_placeholder.jpg" id="movie-poster" />
     </div>
+
     <form id="user-forms">
-      <h1 id="movie-title">$Movie Title$</h1>
+      <img src="./src/fire.jpg" class="background-fire-image">
+
+      <div id="form-container">
+      <h2 id="movie-title">$Movie Title$</h2>
       <fieldset id="radio-container">
         <legend id="legend">Rate this movie:</legend>
         <div class="form-group">
@@ -127,16 +134,20 @@
         />
         </div>
       </fieldset>
+
       <fieldset id="text-box-container">
         <label for="hot_takes">Give us your 🔥 Hot Take 🔥 </label>
         <input type="text" maxlength="100" id="text-box" name="hot_takes"/>
         <button type="submit" id="submit-button">Submit Review</button>
       </fieldset>
+
       <input type="number" name="movie_id" id="movie-id" hidden>
+      
       <section id="user-hot-takes">
         <h1>Hot Takes:</h1>
         <div class="hot-take-container"></div>
       </section>
+    </div>
     </form>
     </div>
   </body>
