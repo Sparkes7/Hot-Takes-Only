@@ -1,6 +1,6 @@
 import { getMovie, getRandomMovie } from "./fetchapi";
 
-const emotes = ["😡", "😍", "👀", "🥺", "🤯", "🤡", "💘", "💀", "🤢", "👺"];
+const emotes = ["😡", "😍", "👀", "🥺", "🤯", "🤡", "😏", "💀", "🤢", "👺"];
 // const movieData = await getMovie(13);
 const movieData = await getRandomMovie();
 console.log(movieData.trailer);
