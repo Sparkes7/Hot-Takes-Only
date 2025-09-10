@@ -18,6 +18,7 @@
       <img src="./src/poster_placeholder.jpg" id="movie-poster" />
     </div>
 
+    <div id="iframe-form-container">
     <form id="user-forms">
       <img src="./src/fire.jpg" class="background-fire-image">
 
@@ -77,7 +78,6 @@
           type="radio"
           name="rating"
           value="5"
-          checked
         />
         </div>
 
@@ -114,6 +114,7 @@
         />
         </div>
 
+        <div class="form-group">
         <label for="9" class="radio-label">🤯</label>
         <input hidden
           class="radio-buttons"
@@ -122,6 +123,7 @@
           name="rating"
           value="9"
         />
+      </div>
 
         <div class="form-group">
         <label for="10" class="radio-label">🤮</label>
@@ -137,7 +139,7 @@
 
       <fieldset id="text-box-container">
         <label for="hot_takes">Give us your 🔥 Hot Take 🔥 </label>
-        <input type="text" maxlength="100" id="text-box" name="hot_takes"/>
+        <input type="text" maxlength="100" id="text-box" name="hot_takes" required/>
         <button type="submit" id="submit-button">Submit Review</button>
       </fieldset>
 
@@ -148,6 +150,8 @@
       </section>
     </div>
     </form>
-    </div>
+  </div>
+
+
   </body>
 </html>
