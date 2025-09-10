@@ -1,6 +1,6 @@
 import { getMovie, getRandomMovie } from "./fetchapi";
 
-const emotes = ["🤬", "🤮", "3", "4", "5", "6", "7", "8", "9", "10"];
+const emotes = ["😡", "😍", "👀", "🥺", "🤯", "🤡", "💘", "💀", "🤢", "👺"];
 // const movieData = await getMovie(13);
 const movieData = await getRandomMovie();
 console.log(movieData.trailer);
@@ -43,7 +43,9 @@ async function getHotTakes() {
     if (take.movie_id === movieData.id) {
       const hotTake = document.createElement("p");
       hotTake.classList.add("hot-take-text");
-      hotTake.textContent = ` ${emotes[take.rating]} ${take.hot_takes}`;
+      hotTake.textContent = `${emotes[take.rating - 1]} ${take.hot_takes} ${
+        emotes[take.rating - 1]
+      }`;
       hotTakeContainer.appendChild(hotTake);
     }
   }

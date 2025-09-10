@@ -6,8 +6,14 @@
     <!-- To add: favicon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="./src/style.css" />
     <script type="module" src="./src/app.js" defer></script>
@@ -20,139 +26,153 @@
     </div>
 
     <div id="iframe-form-container">
-    <form id="user-forms">
-      <img src="./src/fire.jpg" class="background-fire-image">
+      <form id="user-forms">
+        <img src="./src/fire.jpg" class="background-fire-image" />
 
-      <div id="form-container">
-      <h2 id="movie-title">$Movie Title$</h2>
-      <fieldset id="radio-container">
-        <legend id="legend">Rate this movie:</legend>
-        <div class="form-group">
-        <label for="1" class="radio-label">🤬</label>
-        <input hidden
-          class="radio-buttons"
-          id="1"
-          type="radio"
-          name="rating"
-          value="1"
-        />
+        <div id="form-container">
+          <h2 id="movie-title">$Movie Title$</h2>
+          <fieldset id="radio-container">
+            <legend id="legend">Rate this movie:</legend>
+            <div class="form-group">
+              <label for="1" class="radio-label">😡</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="1"
+                type="radio"
+                name="rating"
+                value="1"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="2" class="radio-label">😍</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="2"
+                type="radio"
+                name="rating"
+                value="2"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="3" class="radio-label">👀</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="3"
+                type="radio"
+                name="rating"
+                value="3"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="4" class="radio-label">🥺</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="4"
+                type="radio"
+                name="rating"
+                value="4"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="5" class="radio-label">🤯</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="5"
+                type="radio"
+                name="rating"
+                value="5"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="6" class="radio-label">🤡</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="6"
+                type="radio"
+                name="rating"
+                value="6"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="7" class="radio-label">💘</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="7"
+                type="radio"
+                name="rating"
+                value="7"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="8" class="radio-label">💀</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="8"
+                type="radio"
+                name="rating"
+                value="8"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="9" class="radio-label">🤢</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="9"
+                type="radio"
+                name="rating"
+                value="9"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="10" class="radio-label">👺</label>
+              <input
+                hidden
+                class="radio-buttons"
+                id="10"
+                type="radio"
+                name="rating"
+                value="10"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset id="text-box-container">
+            <label for="hot_takes">Give us your 🔥 Hot Take 🔥 </label>
+            <input
+              type="text"
+              maxlength="100"
+              id="text-box"
+              name="hot_takes"
+              required
+            />
+            <button type="submit" id="submit-button">Submit Review</button>
+          </fieldset>
+
+          <input type="number" name="movie_id" id="movie-id" hidden />
+
+          <section id="user-hot-takes">
+            <div class="hot-take-container"></div>
+          </section>
         </div>
-
-        <div class="form-group">
-        <label for="2" class="radio-label">🤮</label>
-        <input hidden
-          class="radio-buttons"
-          id="2"
-          type="radio"
-          name="rating"
-          value="2"
-        />
-        </div>
-
-        <div class="form-group">
-        <label for="3" class="radio-label">🤢</label>
-        <input hidden
-          class="radio-buttons"
-          id="3"
-          type="radio"
-          name="rating"
-          value="3"
-        />
-        </div>
-        
-        <div class="form-group">
-        <label for="4" class="radio-label">😕</label>
-        <input hidden
-          class="radio-buttons"
-          id="4"
-          type="radio"
-          name="rating"
-          value="4"
-        />
-        </div>
-
-        <div class="form-group">
-        <label for="5" class="radio-label">😐</label>
-        <input hidden
-          class="radio-buttons"
-          id="5"
-          type="radio"
-          name="rating"
-          value="5"
-        />
-        </div>
-
-        <div class="form-group">
-        <label for="6" class="radio-label">🤮</label>
-        <input hidden
-          class="radio-buttons"
-          id="6"
-          type="radio"
-          name="rating"
-          value="6"
-        />
-        </div>
-
-        <div class="form-group">
-        <label for="7" class="radio-label">🤮</label>
-        <input hidden
-          class="radio-buttons"
-          id="7"
-          type="radio"
-          name="rating"
-          value="7"
-        />
-        </div>
-
-        <div class="form-group">
-        <label for="8" class="radio-label">🥵</label>
-        <input hidden
-          class="radio-buttons"
-          id="8"
-          type="radio"
-          name="rating"
-          value="8"
-        />
-        </div>
-
-        <div class="form-group">
-        <label for="9" class="radio-label">🤯</label>
-        <input hidden
-          class="radio-buttons"
-          id="9"
-          type="radio"
-          name="rating"
-          value="9"
-        />
-      </div>
-
-        <div class="form-group">
-        <label for="10" class="radio-label">🤮</label>
-        <input hidden
-          class="radio-buttons"
-          id="10"
-          type="radio"
-          name="rating"
-          value="10"
-        />
-        </div>
-      </fieldset>
-
-      <fieldset id="text-box-container">
-        <label for="hot_takes">Give us your 🔥 Hot Take 🔥 </label>
-        <input type="text" maxlength="100" id="text-box" name="hot_takes" required/>
-        <button type="submit" id="submit-button">Submit Review</button>
-      </fieldset>
-
-      <input type="number" name="movie_id" id="movie-id" hidden>
-      
-      <section id="user-hot-takes">
-        <div class="hot-take-container"></div>
-      </section>
+      </form>
     </div>
-    </form>
-  </div>
-
-
   </body>
 </html>
