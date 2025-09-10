@@ -33,7 +33,7 @@ async function getHotTakes() {
   console.log(hotTakes);
 
   const hotTakeContainer = document.querySelector(".hot-take-container");
-  const genHotTakeText = document.createElement("h1");
+  const genHotTakeText = document.createElement("h2");
   hotTakeContainer.innerHTML = "";
   genHotTakeText.textContent = "🔥 Your Hot Takes 🔥";
   genHotTakeText.classList = "hot-take-text-header";
