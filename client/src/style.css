@@ -12,6 +12,7 @@ body {
   grid-template-rows: 1fr;
   gap: 1.5vw;
   background-color: #1a1a1a;
+  font-family: "Albert Sans", sans-serif;
 }
 
 #page-title {
@@ -30,7 +31,7 @@ body {
   text-shadow: 2px 2px 5px #000;
 }
 
-/* === movie poster === */
+/* === left panel - movie poster === */
 #poster-container {
   grid-column-start: 2;
   grid-row-start: 2;
@@ -46,16 +47,7 @@ body {
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.76);
 }
 
-/* === iframe - right panel === */
-iframe {
-  grid-column: 4;
-  grid-row-start: 2;
-  width: 100%;
-  /*height: auto; */
-  aspect-ratio: auto;
-}
-
-/* === user forms + submit === */
+/* === right panel - iframe + user forms + submit === */
 #iframe-form-container {
   grid-column-start: 4;
   display: flex;
@@ -64,8 +56,8 @@ iframe {
 }
 
 iframe {
-  /* margin-bottom: 5rem; */
   aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 #user-forms {
