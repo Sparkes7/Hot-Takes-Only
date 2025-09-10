@@ -3,6 +3,7 @@ import { getMovie, getRandomMovie } from "./fetchapi";
 const emotes = ["🤬", "🤮", "3", "4", "5", "6", "7", "8", "9", "10"];
 // const movieData = await getMovie(13);
 const movieData = await getRandomMovie();
+console.log(movieData.trailer);
 
 async function SetRandomMovie() {
   const movieID = document.getElementById("movie-id");
@@ -16,8 +17,10 @@ async function SetRandomMovie() {
 
   const movieTrailer = document.createElement("iframe");
   const iframeFormContainer = document.getElementById("iframe-form-container");
-  movieTrailer.src = movieData.trailer;
-  iframeFormContainer.prepend(movieTrailer);
+  if (movieData.trailer !== "https://www.youtube.com/embed/undefined") {
+    movieTrailer.src = movieData.trailer;
+    iframeFormContainer.prepend(movieTrailer);
+  }
 }
 
 async function getHotTakes() {
@@ -29,29 +32,23 @@ async function getHotTakes() {
   const hotTakes = await response.json();
   console.log(hotTakes);
 
-  const submitButton = document.getElementById("submit-button");
+  const hotTakeContainer = document.querySelector(".hot-take-container");
+  const genHotTakeText = document.createElement("h1");
+  hotTakeContainer.innerHTML = "";
+  genHotTakeText.textContent = "🔥 Your Hot Takes 🔥";
+  genHotTakeText.classList = "hot-take-text-header";
+  hotTakeContainer.appendChild(genHotTakeText);
 
-  submitButton.addEventListener("click", function () {
-    const hotTakeContainer = document.querySelector(".hot-take-container");
-    const genHotTakeText = document.createElement("h1");
-    hotTakeContainer.innerHTML = "";
-    genHotTakeText.textContent = "🔥 Your Hot Takes 🔥";
-    genHotTakeText.classList = "hot-take-text-header";
-    hotTakeContainer.appendChild(genHotTakeText);
-
-    for (let take of hotTakes) {
-      if (take.movie_id === movieData.id) {
-        const hotTake = document.createElement("p");
-        hotTake.classList.add("hot-take-text");
-        hotTake.textContent = ` ${emotes[take.rating]} ${take.hot_takes}`;
-        hotTakeContainer.appendChild(hotTake);
-      }
+  for (let take of hotTakes) {
+    if (take.movie_id === movieData.id) {
+      const hotTake = document.createElement("p");
+      hotTake.classList.add("hot-take-text");
+      hotTake.textContent = ` ${emotes[take.rating]} ${take.hot_takes}`;
+      hotTakeContainer.appendChild(hotTake);
     }
-  });
+  }
 }
-
 SetRandomMovie();
-getHotTakes();
 
 const userForms = document.getElementById("user-forms");
 userForms.addEventListener("submit", handleSubmit);
@@ -70,4 +67,6 @@ function handleSubmit(event) {
     },
     body: JSON.stringify({ formValues }),
   });
+
+  setTimeout(getHotTakes, 500);
 }
