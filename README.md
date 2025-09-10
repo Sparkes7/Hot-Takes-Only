@@ -24,7 +24,3 @@ This is another push - Gabby
 ### Problem Domain
 
 An app that gives the user a random popular movie to provide a vibe-based review, focusing on providing amusing "hot takes" and sharing these with other users.
-
-### Planning
-
-- after lunch: proper wireframe, problem domain, trello board

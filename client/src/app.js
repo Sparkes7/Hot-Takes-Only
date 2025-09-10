@@ -24,15 +24,25 @@ async function getHotTakes() {
   const hotTakes = await response.json();
   console.log(hotTakes);
 
-  const hotTakeContainer = document.querySelector(".hot-take-container");
-  for (let take of hotTakes) {
-    if (take.movie_id === movieData.id) {
-      const hotTake = document.createElement("p");
-      hotTake.classList.add("hot-take-text");
-      hotTake.textContent = ` ${emotes[take.rating]} ${take.hot_takes}`;
-      hotTakeContainer.appendChild(hotTake);
+  const submitButton = document.getElementById("submit-button");
+
+  submitButton.addEventListener("click", function () {
+    const hotTakeContainer = document.querySelector(".hot-take-container");
+    const genHotTakeText = document.createElement("h1");
+    hotTakeContainer.innerHTML = "";
+    genHotTakeText.textContent = "🔥 Your Hot Takes 🔥";
+    genHotTakeText.classList = "hot-take-text-header";
+    hotTakeContainer.appendChild(genHotTakeText);
+
+    for (let take of hotTakes) {
+      if (take.movie_id === movieData.id) {
+        const hotTake = document.createElement("p");
+        hotTake.classList.add("hot-take-text");
+        hotTake.textContent = ` ${emotes[take.rating]} ${take.hot_takes}`;
+        hotTakeContainer.appendChild(hotTake);
+      }
     }
-  }
+  });
 }
 
 SetRandomMovie();
