@@ -57,6 +57,9 @@ userForms.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
+  const submitSound = document.getElementById("submitSound");
+  submitSound.volume = 0.15;
+
   const formData = new FormData(userForms);
   const formValues = Object.fromEntries(formData);
   console.log(formValues);
@@ -71,4 +74,5 @@ function handleSubmit(event) {
   });
 
   setTimeout(getHotTakes, 500);
+  submitSound.play();
 }
