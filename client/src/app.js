@@ -56,6 +56,9 @@ const userForms = document.getElementById("user-forms");
 userForms.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
+  const submitButton = document.getElementById("submit-button");
+  submitButton.setAttribute("disabled", true);
+  submitButton.textContent = "Submitted!";
   event.preventDefault();
   const formData = new FormData(userForms);
   const formValues = Object.fromEntries(formData);
