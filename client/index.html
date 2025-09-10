@@ -165,15 +165,9 @@
           </fieldset>
 
           <fieldset id="text-box-container">
-            <label for="hot_takes">Give us your 🔥 Hot Take 🔥 </label>
-            <input
-              type="text"
-              maxlength="100"
-              id="text-box"
-              name="hot_takes"
-              required
-            />
-            <button type="submit" id="submit-button">Submit Take</button>
+            <label for="hot_takes">Give us your 🔥 Hot Take 🔥</label>
+            <textarea name="hot_takes" id="text-box" rows="3" columns="10" maxlength="100" placeholder="Add your Hot Takes here" required></textarea>
+            <button type="submit" id="submit-button">Submit Hot Take</button>
           </fieldset>
 
           <input type="number" name="movie_id" id="movie-id" hidden />
