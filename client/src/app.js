@@ -15,8 +15,9 @@ async function SetRandomMovie() {
   posterImage.src = movieData.poster;
 
   const movieTrailer = document.createElement("iframe");
+  const iframeFormContainer = document.getElementById("iframe-form-container");
   movieTrailer.src = movieData.trailer;
-  document.body.appendChild(movieTrailer);
+  iframeFormContainer.prepend(movieTrailer);
 }
 
 async function getHotTakes() {
