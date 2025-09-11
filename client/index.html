@@ -29,6 +29,7 @@
 
     <div id="poster-container">
       <img src="" id="movie-poster" alt="" draggable="false" />
+      <button id="refresh-button" class="refresh-button">Next Movie</button>
     </div>
 
     <div id="iframe-form-container">
@@ -46,7 +47,6 @@
           <fieldset id="radio-container">
             <legend id="legend">Emote your Hot Take:</legend>
             <div class="form-group">
-              <label for="1" class="radio-label">😡</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -55,10 +55,10 @@
                 name="rating"
                 value="1"
               />
+              <label for="1" class="radio-label">😡</label>
             </div>
 
             <div class="form-group">
-              <label for="2" class="radio-label">😍</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -67,10 +67,10 @@
                 name="rating"
                 value="2"
               />
+              <label for="2" class="radio-label">😍</label>
             </div>
 
             <div class="form-group">
-              <label for="3" class="radio-label">👀</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -79,10 +79,10 @@
                 name="rating"
                 value="3"
               />
+              <label for="3" class="radio-label">👀</label>
             </div>
 
             <div class="form-group">
-              <label for="4" class="radio-label">🥺</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -91,10 +91,10 @@
                 name="rating"
                 value="4"
               />
+              <label for="4" class="radio-label">🥺</label>
             </div>
 
             <div class="form-group">
-              <label for="5" class="radio-label">🤯</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -103,10 +103,10 @@
                 name="rating"
                 value="5"
               />
+              <label for="5" class="radio-label">🤯</label>
             </div>
 
             <div class="form-group">
-              <label for="6" class="radio-label">🤡</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -115,10 +115,10 @@
                 name="rating"
                 value="6"
               />
+              <label for="6" class="radio-label">🤡</label>
             </div>
 
             <div class="form-group">
-              <label for="7" class="radio-label">😏</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -127,10 +127,10 @@
                 name="rating"
                 value="7"
               />
+              <label for="7" class="radio-label">😏</label>
             </div>
 
             <div class="form-group">
-              <label for="8" class="radio-label">💀</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -139,10 +139,10 @@
                 name="rating"
                 value="8"
               />
+              <label for="8" class="radio-label">💀</label>
             </div>
 
             <div class="form-group">
-              <label for="9" class="radio-label">🤢</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -151,10 +151,10 @@
                 name="rating"
                 value="9"
               />
+              <label for="9" class="radio-label">🤢</label>
             </div>
 
             <div class="form-group">
-              <label for="10" class="radio-label">👺</label>
               <input
                 hidden
                 class="radio-buttons"
@@ -163,6 +163,7 @@
                 name="rating"
                 value="10"
               />
+              <label for="10" class="radio-label">👺</label>
             </div>
           </fieldset>
 
@@ -170,6 +171,7 @@
             <label for="hot_takes">Give us your 🔥 Hot Take 🔥</label>
             <textarea name="hot_takes" id="hot_takes" rows="3" columns="10" maxlength="100" placeholder="Add your Hot Takes here" required></textarea>
             <p id="character-count">0 / 100 characters</p>
+
             <button type="submit" id="submit-button">Submit Hot Take</button>
           </fieldset>
 
