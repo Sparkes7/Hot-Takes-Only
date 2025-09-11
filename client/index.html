@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-    <!-- To add: favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
       rel="stylesheet"
@@ -21,26 +19,24 @@
   </head>
 
   <body>
-    <audio hidden id="submitSound" src="./src/tinkle4.mp3"></audio>
+    <audio hidden id="submitSound" src="./assets/tinkle4.mp3"></audio>
     <h1 id="page-title">Hot Takes Only</h1>
     <div id="poster-container">
-      <img
-        src="./src/poster_placeholder.jpg"
-        id="movie-poster"
-        draggable="false"
-      />
+      <img src="" id="movie-poster" alt="" draggable="false" />
     </div>
 
     <div id="iframe-form-container">
       <form id="user-forms">
         <img
-          src="./src/fire.jpg"
+          src="./assets/fire.jpg"
+          alt="An image of flames as the background for
+        the review box."
           class="background-fire-image"
           draggable="false"
         />
 
         <div id="form-container">
-          <h2 id="movie-title">$Movie Title$</h2>
+          <h2 id="movie-title"></h2>
           <fieldset id="radio-container">
             <legend id="legend">Emote your Hot Take:</legend>
             <div class="form-group">
