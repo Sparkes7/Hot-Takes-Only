@@ -50,7 +50,7 @@ async function getHotTakes() {
   const hotTakeContainer = document.querySelector(".hot-take-container");
   const genHotTakeText = document.createElement("h2");
   hotTakeContainer.innerHTML = "";
-  genHotTakeText.textContent = "🔥 Your Hot Takes 🔥";
+  genHotTakeText.textContent = `🔥 Hot Takes For ${movieData.title} 🔥`;
   genHotTakeText.classList = "hot-take-text-header";
   hotTakeContainer.appendChild(genHotTakeText);
 
