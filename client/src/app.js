@@ -68,7 +68,6 @@ function handleSubmit(event) {
   const formValues = Object.fromEntries(formData);
   console.log(formValues);
 
-  //URL will be localhost for now - will update this once we have render URL
   fetch("https://hot-takes-only.onrender.com/add-user-reviews", {
     method: "POST",
     headers: {
@@ -80,3 +79,13 @@ function handleSubmit(event) {
   setTimeout(getHotTakes, 500);
   submitSound.play();
 }
+
+//character count for textarea
+const hotTakesText = document.getElementById("hot_takes");
+const characterCount = document.getElementById("character-count");
+const maxLength = hotTakesText.getAttribute("maxlength");
+
+hotTakesText.addEventListener("input", () => {
+  const currentLength = hotTakesText.value.length;
+  characterCount.textContent = `${currentLength} / ${maxLength} characters`;
+})
