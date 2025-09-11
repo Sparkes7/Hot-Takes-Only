@@ -14,11 +14,13 @@ async function SetRandomMovie() {
 
   const posterImage = document.getElementById("movie-poster");
   posterImage.src = movieData.poster;
+  posterImage.alt = `The movie poster for ${movieData.title}`;
 
   const movieTrailer = document.createElement("iframe");
   const iframeFormContainer = document.getElementById("iframe-form-container");
   if (movieData.trailer !== "https://www.youtube.com/embed/undefined") {
     movieTrailer.src = movieData.trailer;
+    movieTrailer.title = `Movie trailer for ${movieData.title}`;
     iframeFormContainer.prepend(movieTrailer);
   }
 }
