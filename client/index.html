@@ -15,12 +15,18 @@
 
     <link rel="stylesheet" href="./src/style.css" />
     <script type="module" src="./src/app.js" defer></script>
-    <title>Hot Takes Only: A movie review platform</title>
+    <title>Hot Takes Only: A Movie Review Platform</title>
   </head>
 
   <body>
     <audio hidden id="submitSound" src="./assets/tinkle4.mp3"></audio>
-    <h1 id="page-title">Hot Takes Only</h1>
+
+    <main>
+    <div id="page-title">
+      <h1>Hot Takes Only</h1>
+      <p id="slogan">Where Movie Opinions Go Nuclear!</p>
+    </div>
+
     <div id="poster-container">
       <img src="" id="movie-poster" alt="" draggable="false" />
       <button id="refresh-button" class="refresh-button">Next Movie</button>
@@ -163,15 +169,9 @@
 
           <fieldset id="text-box-container">
             <label for="hot_takes">Give us your 🔥 Hot Take 🔥</label>
-            <textarea
-              name="hot_takes"
-              id="text-box"
-              rows="3"
-              columns="10"
-              maxlength="100"
-              placeholder="Add your Hot Takes here"
-              required
-            ></textarea>
+            <textarea name="hot_takes" id="hot_takes" rows="3" columns="10" maxlength="100" placeholder="Add your Hot Takes here" required></textarea>
+            <p id="character-count">0 / 100 characters</p>
+
             <button type="submit" id="submit-button">Submit Hot Take</button>
           </fieldset>
 
@@ -183,5 +183,6 @@
         </div>
       </form>
     </div>
+    </main>
   </body>
 </html>
