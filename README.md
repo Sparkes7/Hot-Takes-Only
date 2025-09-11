@@ -23,6 +23,7 @@ People have historically been forced to produce grandiose and arduous movie revi
 #### User stories:
 
 - I want to see a random movie when I open the website
+- I want to be able to submit a Hot Take using a form 
 - I want to assign an emoji based on feeling, to go with the Hot Take
 - I want the website to feature some animation for visual feedback
 - I want to be able to access the website on my mobile device and have
