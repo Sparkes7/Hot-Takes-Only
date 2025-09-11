@@ -51,7 +51,7 @@ body {
 #iframe-form-container {
   grid-column-start: 4;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -75,15 +75,15 @@ iframe {
   border-style: none;
   /* margin: 0 auto; */
   /* width: fit-content; */
-  position: relative; 
+  position: relative;
   z-index: 1;
   gap: 1rem;
   background: linear-gradient(
-  135deg,
-  rgba(255, 76, 41, 0.55),
-  rgba(255, 136, 75, 0.6),
-  rgba(255, 201, 60, 0.55)
-);
+    135deg,
+    rgba(255, 76, 41, 0.55),
+    rgba(255, 136, 75, 0.6),
+    rgba(255, 201, 60, 0.55)
+  );
 }
 
 .background-fire-image {
@@ -182,22 +182,22 @@ iframe {
 
 /* === media queries === */
 @media (max-width: 768px) {
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-    #page-title {
-      text-align: center;
-      padding: 0.5rem;
-    }
+  #page-title {
+    text-align: center;
+    padding: 0.5rem;
+  }
 
-    #poster-container {
-      width: 100%;
-    }
+  #poster-container {
+    width: 100%;
+  }
 
   #movie-poster {
     height: auto;
