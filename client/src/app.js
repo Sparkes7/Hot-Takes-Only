@@ -12,7 +12,7 @@ const rand = Math.floor(Math.random() * movieList.length);
 
 const movieData = await getMovie(movieList[rand]);
 // const movieData = await getRandomMovie();
-console.log(movieData.trailer);
+// console.log(movieData.trailer);
 
 async function SetRandomMovie() {
   const movieID = document.getElementById("movie-id");

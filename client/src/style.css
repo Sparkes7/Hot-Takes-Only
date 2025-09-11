@@ -1,5 +1,3 @@
-/* @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"); */
-
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +18,6 @@ main {
 
 #page-title {
   display: grid;
-  /* grid-column-start: 1; */
-  /* grid-row-start: 1; */
   grid-column: 1 / -1;
   grid-template-rows: auto auto;
   justify-items: center;
@@ -58,9 +54,25 @@ main {
 .refresh-button {
   position: absolute;
   bottom: 0;
-  padding: 0.5rem 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
+  background-color: rgba(54, 69, 79, 0.8);
+  border: none;
+  width: 100%;
+  max-width: 150px;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.05rem;
+  transition: 0.3s linear;
+  align-self: center;
 }
+
+#refresh-button:hover {
+  background-color: rgba(54, 69, 79, 1);
+}
+
 
 #movie-poster {
   height: 75vh;
@@ -85,7 +97,6 @@ iframe {
 }
 
 #user-forms {
-  /* grid-column: 4; */
   grid-row-start: 2;
   display: flex;
   flex-direction: column;
@@ -97,8 +108,6 @@ iframe {
   padding: 1rem;
   box-shadow: 0 0 12px rgba(255, 136, 75, 0.5);
   border-style: none;
-  /* margin: 0 auto; */
-  /* width: fit-content; */
   position: relative;
   z-index: 1;
   gap: 1rem;
@@ -108,6 +117,7 @@ iframe {
     rgba(255, 136, 75, 0.6),
     rgba(255, 201, 60, 0.55)
   );
+  margin-top: 1.5rem;
 }
 
 .background-fire-image {
@@ -279,11 +289,6 @@ iframe {
 /* === media queries === */
 @media (max-width: 768px) {
   body {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem; */
     padding: 1rem;
   }
 
@@ -334,16 +339,23 @@ iframe {
     gap: 0.5rem;
   }
 
-  #text-box {
-    max-width: 100%;
+  #hot_takes {
+    width: 100%;
   }
 }
 
-#user-hot-takes {
-  width: 100%;
-}
+  #user-hot-takes {
+    width: 100%;
+  }
 
 @media (max-width: 320px) {
+  .refresh-button {
+    max-width: 130px;
+    height: 1.5rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+
   .hot-take-text-header {
     width: 100%;
     text-align: center;

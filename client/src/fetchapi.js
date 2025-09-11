@@ -50,7 +50,7 @@ export async function getMovie(id) {
   );
 
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   const posterBase = "https://image.tmdb.org/t/p/w342";
   const movieId = data.id;
   const movieTitle = data.original_title;
@@ -61,7 +61,7 @@ export async function getMovie(id) {
     options
   );
   const videodata = await videoresponse.json();
-  console.log(videodata);
+  // console.log(videodata);
   const word = "Trailer";
 
   let trailerKey;
