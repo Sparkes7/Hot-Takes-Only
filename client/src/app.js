@@ -1,8 +1,17 @@
 import { getMovie, getRandomMovie } from "./fetchapi";
 
 const emotes = ["😡", "😍", "👀", "🥺", "🤯", "🤡", "😏", "💀", "🤢", "👺"];
-// const movieData = await getMovie(122);
-const movieData = await getRandomMovie();
+
+const movieList = [
+  597, 120, 603, 329, 671, 278, 680, 550, 13, 857, 197, 98, 85, 11, 19995,
+  37724, 475557, 155, 771, 245891, 157336, 27205, 948, 4488, 218, 105, 578, 539,
+  493922, 4232, 8587, 22, 808, 109445, 9806, 862, 24428, 1726, 271110, 557,
+  63464, 348,
+];
+const rand = Math.floor(Math.random() * movieList.length);
+
+const movieData = await getMovie(movieList[rand]);
+// const movieData = await getRandomMovie();
 console.log(movieData.trailer);
 
 async function SetRandomMovie() {
@@ -24,6 +33,11 @@ async function SetRandomMovie() {
     iframeFormContainer.prepend(movieTrailer);
   }
 }
+
+const refreshButton = document.getElementById("refresh-button");
+refreshButton.addEventListener("click", function () {
+  window.location.reload();
+});
 
 async function getHotTakes() {
   const response = await fetch(

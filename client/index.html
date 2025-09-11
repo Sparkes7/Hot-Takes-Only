@@ -23,6 +23,7 @@
     <h1 id="page-title">Hot Takes Only</h1>
     <div id="poster-container">
       <img src="" id="movie-poster" alt="" draggable="false" />
+      <button id="refresh-button" class="refresh-button">Skip Movie</button>
     </div>
 
     <div id="iframe-form-container">
@@ -162,7 +163,15 @@
 
           <fieldset id="text-box-container">
             <label for="hot_takes">Give us your 🔥 Hot Take 🔥</label>
-            <textarea name="hot_takes" id="text-box" rows="3" columns="10" maxlength="100" placeholder="Add your Hot Takes here" required></textarea>
+            <textarea
+              name="hot_takes"
+              id="text-box"
+              rows="3"
+              columns="10"
+              maxlength="100"
+              placeholder="Add your Hot Takes here"
+              required
+            ></textarea>
             <button type="submit" id="submit-button">Submit Hot Take</button>
           </fieldset>
 
