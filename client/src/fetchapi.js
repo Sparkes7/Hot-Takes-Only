@@ -48,16 +48,34 @@ export async function getMovie(id) {
     `https://api.themoviedb.org/3/movie/${id}`,
     options
   );
+
   const data = await response.json();
+  console.log(data);
   const posterBase = "https://image.tmdb.org/t/p/w342";
   const movieId = data.id;
   const movieTitle = data.original_title;
   const poster = posterBase + data.poster_path;
+
+  const videoresponse = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}/videos`,
+    options
+  );
+  const videodata = await videoresponse.json();
+  console.log(videodata);
+  const word = "Trailer";
+
+  let trailerKey;
+  for (let video of videodata.results) {
+    if (video.name.includes(word)) {
+      trailerKey = video.key;
+    }
+  }
+
   const movieData = {
     id: movieId,
     title: movieTitle,
     poster: poster,
+    trailer: `https://www.youtube.com/embed/${trailerKey}`,
   };
-  console.log(movieData);
   return movieData;
 }

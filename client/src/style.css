@@ -58,6 +58,7 @@ body {
 iframe {
   aspect-ratio: 16 / 9;
   width: 100%;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.76);
 }
 
 #user-forms {
@@ -79,11 +80,11 @@ iframe {
   z-index: 1;
   gap: 1rem;
   background: linear-gradient(
-    135deg,
-    rgba(255, 76, 41, 0.55),
-    rgba(255, 136, 75, 0.6),
-    rgba(255, 201, 60, 0.55)
-  );
+  135deg,
+  rgba(255, 76, 41, 0.45),
+  rgba(255, 136, 75, 0.6),
+  rgba(255, 201, 60, 0.55)
+);
 }
 
 .background-fire-image {
@@ -110,9 +111,11 @@ iframe {
 #movie-title {
   display: flex;
   justify-content: center;
-  margin: 0.3rem 0;
+  margin-top: 0.3rem;
   font-family: "Luckiest Guy", sans-serif;
   letter-spacing: 0.15rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 #radio-container {
@@ -124,8 +127,10 @@ iframe {
   margin: 0.3rem 0;
 }
 
-#legend {
+#legend, #text-box-container label {
   text-align: center;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
 }
 
 .form-group {
@@ -133,11 +138,12 @@ iframe {
 }
 
 .radio-label {
+  display: inline-block;
   padding: 0 0.2rem;
   cursor: pointer;
   font-size: 1.3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s linear;
 }
 
 .radio-label:hover {
@@ -152,32 +158,80 @@ iframe {
   align-items: center;
 }
 
+#text-box-container textarea {
+  resize: none;
+  font-family: "Albert Sans", sans-serif;
+  padding: 0.5rem;
+  border: none;
+  font-size: 0.85rem;
+}
+
 #text-box {
-  border-style: solid;
-  /* background-image: url("./fire.jpg"); */
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                    url("./fire.jpg"); */
-  /* border-color: rgb(255, 0, 0); */
   background-position: 10px center;
-  border-radius: 3px;
+  border-radius: 12px;
   width: 100%;
   height: 5vh;
 }
+
 #submit-button {
-  border-style: solid black;
+  background-color: #ff4c29;
+  border: none;
   width: 100%;
+  max-width: 250px;
   height: 2rem;
   margin-top: 0.5rem;
   cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 76, 41, 0.4);
+  letter-spacing: 0.05rem;
+  transition: 0.3s linear;
 }
 
+#submit-button:hover {
+  background-color: #bf3100;
+  transform: scale(1.1);
+}
+
+#submit-button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  transform: none;
+}
+
+/* === submitted hot takes from users === */
 #user-hot-takes {
   grid-column-start: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hot-take-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hot-take-text-header {
+  text-align: center;
+  font-family: "Luckiest Guy", sans-serif;
+  letter-spacing: 0.15rem;
+  font-size: 1.6rem;
+  margin: 0.3rem 0;
 }
 
 .hot-take-text {
-  background-color: rgb(228, 228, 228);
-  margin: 0.5rem;
+  background-color: rgb(238, 238, 238);
+  margin: 0.1rem;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-align: center;
 }
 
 /* === media queries === */
@@ -206,6 +260,26 @@ iframe {
 
   #user-forms {
     width: 90vw;
+    max-width: 100%;
     margin: 1rem 0;
+    overflow-x: hidden;
+  }
+
+  #radio-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  #submit-button, #text-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .hot-take-text-header {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem auto;
+    font-size: 1.34rem;
   }
 }
